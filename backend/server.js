@@ -25,8 +25,10 @@ async function criarTabelaVisitas() {
 
     console.log('✅ Tabela visitas pronta.');
   } catch (err) {
-    console.error('❌ Erro ao criar tabela visitas:', err.message);
-  }
+  console.error('❌ Erro ao criar tabela visitas (erro completo):');
+  console.error(err);
+}
+
 }
 
 const PORT = process.env.PORT || 3000;
