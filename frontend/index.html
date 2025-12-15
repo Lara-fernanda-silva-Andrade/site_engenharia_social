@@ -3,36 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <title>Sorteio de Fim de Ano da Proz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- TOPO ROXO -->
-    <header class="topo">
-        
-        
-    </header>
+    <!-- FAIXA ROXA -->
+    <header class="topo"></header>
 
-    <!-- TÍTULO -->
-    <h1 class="titulo">🎁 Sorteio de Fim de Ano da Proz! 🎁</h1>
+    <!-- TÍTULO COM LOGO -->
+    <h1 class="titulo">
+        Sorteio de Fim de Ano da
+        <img src="logo-proz.png" alt="Proz Educação" class="logo-titulo">
+    
+    </h1>
 
-    <!-- FORMULÁRIO -->
-    <div class="form-container">
-        <iframe 
-            src="https://docs.google.com/forms/d/e/1FAIpQLSe9Jb75pfjRJsxdIuKenaeyJp2ZaFaimmzoCe2GAEjgvJhWMA/viewform?embedded=true"
-            frameborder="0"
-            marginheight="0"
-            marginwidth="0">
-            Carregando…
-        </iframe>
-    </div>
+    <!-- FORMULÁRIO CENTRALIZADO -->
+    <main class="conteudo">
+        <div class="form-container">
+            <iframe 
+                src="https://docs.google.com/forms/d/e/1FAIpQLSe9Jb75pfjRJsxdIuKenaeyJp2ZaFaimmzoCe2GAEjgvJhWMA/viewform?embedded=true"
+                loading="lazy">
+                Carregando…
+            </iframe>
+        </div>
+    </main>
 
     <!-- CONTADOR DISCRETO -->
     <footer class="rodape">
-        <span>👀 Visitas: <span id="contador">0</span></span>
+        👀 Visitas: <span id="contador">0</span>
     </footer>
 
     <script src="script.js"></script>
 </body>
-
 </html>

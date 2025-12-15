@@ -10,29 +10,44 @@ body {
     color: #333;
 }
 
-/* TOPO ROXO */
+/* FAIXA ROXA */
 .topo {
     background-color: #5b2d8b;
-    padding: 16px;
-}
-
-.logo {
-    height: 40px;
+    height: 64px;
+    width: 100%;
 }
 
 /* TÍTULO */
 .titulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+
     text-align: center;
     margin: 24px 16px;
     color: #5b2d8b;
     font-size: 1.8rem;
 }
 
+/* LOGO DENTRO DO TÍTULO */
+.logo-titulo {
+    height: 40px;
+    vertical-align: middle;
+}
+
+/* CONTEÚDO CENTRAL */
+.conteudo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
 /* FORMULÁRIO */
 .form-container {
     width: 100%;
     max-width: 720px;
-    margin: 0 auto;
     padding: 0 12px;
 }
 
@@ -43,7 +58,7 @@ body {
     border-radius: 12px;
 }
 
-/* CONTADOR DISCRETO */
+/* CONTADOR */
 .rodape {
     text-align: center;
     font-size: 0.8rem;
@@ -51,17 +66,17 @@ body {
     margin: 24px 0;
 }
 
-/* 📱 AJUSTES PARA CELULAR */
+/* 📱 MOBILE */
 @media (max-width: 480px) {
     .titulo {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
     }
 
-    .logo {
+    .logo-titulo {
         height: 32px;
     }
 
     .form-container iframe {
-        height: 1300px;
+        height: 1350px;
     }
 }
