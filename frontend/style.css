@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-/* BODY */
 body {
     font-family: Arial, sans-serif;
     background-color: #f6f4fa;
@@ -13,85 +12,56 @@ body {
 
 /* TOPO ROXO */
 .topo {
-    background-color: #5e2d91;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    padding: 0 20px;
+    background-color: #5b2d8b;
+    padding: 16px;
 }
 
 .logo {
-    height: 60px;        /* tamanho bom para desktop */
-    max-height: 70px;
-    width: auto;
+    height: 40px;
 }
 
-
-/* CONTEÚDO PRINCIPAL */
-.conteudo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 30px 16px;
-}
-
-.conteudo h1 {
-    color: #5e2d91;
-    font-size: 28px;
-    margin-bottom: 24px;
+/* TÍTULO */
+.titulo {
     text-align: center;
+    margin: 24px 16px;
+    color: #5b2d8b;
+    font-size: 1.8rem;
 }
 
 /* FORMULÁRIO */
-.formulario {
+.form-container {
     width: 100%;
-    max-width: 700px;
-    background-color: #ffffff;
-    padding: 16px;
-    border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 12px;
 }
 
-/* IFRAME RESPONSIVO */
-.formulario iframe {
+.form-container iframe {
     width: 100%;
-    height: 1100px;
+    height: 1200px;
     border: none;
+    border-radius: 12px;
 }
 
-/* RODAPÉ */
+/* CONTADOR DISCRETO */
 .rodape {
-    margin-top: 30px;
     text-align: center;
-    font-size: 12px;
+    font-size: 0.8rem;
     color: #777;
-    padding-bottom: 16px;
+    margin: 24px 0;
 }
 
-#contador {
-    font-weight: bold;
-    color: #5e2d91;
-}
-
-/* =========================
-   RESPONSIVO (CELULAR)
-========================= */
-@media (max-width: 600px) {
-
-    .topo {
-        height: 70px;
+/* 📱 AJUSTES PARA CELULAR */
+@media (max-width: 480px) {
+    .titulo {
+        font-size: 1.4rem;
     }
 
     .logo {
-    height: 48px;
-}
-
-
-    .conteudo h1 {
-        font-size: 22px;
+        height: 32px;
     }
 
-    .formulario iframe {
-        height: 1250px;
+    .form-container iframe {
+        height: 1300px;
     }
 }
