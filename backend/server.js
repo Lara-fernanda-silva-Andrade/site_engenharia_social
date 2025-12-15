@@ -1,26 +1,15 @@
 const express = require('express');
 const cors = require('cors');
-
-// Pool do PostgreSQL usando variáveis do Render
-const { Pool } = require('pg');
-
-const pool = new Pool({
-  host: process.env.DB_HOST,
-  port: process.env.DB_PORT,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASS,
-  database: process.env.DB_NAME,
-});
+const pool = require('./db'); // 👈 usa o db.js
 
 const app = express();
 
 app.use(express.json());
 app.use(cors());
 
-// Cria a tabela visitas automaticamente ao iniciar o servidor
+// Cria a tabela automaticamente
 async function criarTabelaVisitas() {
   try {
-    // Cria a tabela se ela ainda não existir
     await pool.query(`
       CREATE TABLE IF NOT EXISTS visitas (
         id INTEGER PRIMARY KEY,
@@ -28,20 +17,18 @@ async function criarTabelaVisitas() {
       )
     `);
 
-    // Garante que exista a linha inicial (id = 1)
     await pool.query(`
       INSERT INTO visitas (id, total)
       VALUES (1, 0)
       ON CONFLICT (id) DO NOTHING
     `);
 
-    console.log('Tabela visitas pronta.');
+    console.log('✅ Tabela visitas pronta.');
   } catch (err) {
-    console.error('Erro ao criar tabela visitas:', err);
+    console.error('❌ Erro ao criar tabela visitas:', err.message);
   }
 }
 
-// Inicializa o servidor
 const PORT = process.env.PORT || 3000;
 
 criarTabelaVisitas();
