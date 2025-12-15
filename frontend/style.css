@@ -1,67 +1,67 @@
+/* RESET BÁSICO */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f6f4fa;
-    color: #333;
+/* TOPO */
+header {
+    width: 100%;
+    background-color: #5b2d8b; /* roxo */
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
 }
 
-/* TOPO ROXO */
-.topo {
-    background-color: #5b2d8b;
+/* LOGO */
+header img {
+    height: 50px;          /* desktop */
+    max-width: 100%;
+}
+
+/* CONTEÚDO */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+main {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 16px;
 }
 
-.logo {
-    height: 40px;
-}
-
-/* TÍTULO */
-.titulo {
-    text-align: center;
-    margin: 24px 16px;
-    color: #5b2d8b;
-    font-size: 1.8rem;
-}
-
 /* FORMULÁRIO */
-.form-container {
+iframe {
     width: 100%;
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 0 12px;
-}
-
-.form-container iframe {
-    width: 100%;
-    height: 1200px;
+    max-width: 640px;
+    height: 1332px;
     border: none;
-    border-radius: 12px;
 }
 
-/* CONTADOR DISCRETO */
-.rodape {
+/* CONTADOR */
+footer {
     text-align: center;
-    font-size: 0.8rem;
-    color: #777;
-    margin: 24px 0;
+    font-size: 12px;
+    color: #666;
+    padding: 10px;
 }
 
 /* 📱 AJUSTES PARA CELULAR */
-@media (max-width: 480px) {
-    .titulo {
-        font-size: 1.4rem;
+@media (max-width: 768px) {
+
+    header {
+        justify-content: center; /* centraliza logo */
     }
 
-    .logo {
-        height: 32px;
+    header img {
+        height: 40px; /* logo maior no celular */
     }
 
-    .form-container iframe {
-        height: 1300px;
+    iframe {
+        height: 1100px; /* melhor ajuste no mobile */
     }
 }
