@@ -1,16 +1,97 @@
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin-top: 100px;
-    background-color: #f5f5f5;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-h1 {
+/* BODY */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f6f4fa;
     color: #333;
 }
 
+/* TOPO ROXO */
+.topo {
+    background-color: #5e2d91;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    height: 60px;        /* tamanho bom para desktop */
+    max-height: 70px;
+    width: auto;
+}
+
+
+/* CONTEÚDO PRINCIPAL */
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 16px;
+}
+
+.conteudo h1 {
+    color: #5e2d91;
+    font-size: 28px;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+/* FORMULÁRIO */
+.formulario {
+    width: 100%;
+    max-width: 700px;
+    background-color: #ffffff;
+    padding: 16px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* IFRAME RESPONSIVO */
+.formulario iframe {
+    width: 100%;
+    height: 1100px;
+    border: none;
+}
+
+/* RODAPÉ */
+.rodape {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 12px;
+    color: #777;
+    padding-bottom: 16px;
+}
+
 #contador {
-    font-size: 48px;
-    color: #007BFF;
-    margin-top: 20px;
+    font-weight: bold;
+    color: #5e2d91;
+}
+
+/* =========================
+   RESPONSIVO (CELULAR)
+========================= */
+@media (max-width: 600px) {
+
+    .topo {
+        height: 70px;
+    }
+
+    .logo {
+    height: 48px;
+}
+
+
+    .conteudo h1 {
+        font-size: 22px;
+    }
+
+    .formulario iframe {
+        height: 1250px;
+    }
 }
